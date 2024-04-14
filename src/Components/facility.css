@@ -1,0 +1,164 @@
+.facility{
+    background-color: rgb(183, 248, 248);
+    width: 100%;
+    align-items: left;
+    height: 90vh;
+    padding-bottom: 100px;
+    display: grid;
+  
+}
+.description{
+    font-weight: bold;
+   
+}
+
+.facility h1{
+    font-size: 2rem;
+
+}
+.facility h2{
+    align-items: right;
+}
+.fac-text{
+    display: inline-block;
+    margin-bottom: 10px; 
+    padding: .5px;
+    border-collapse: 2px;
+    align-items: left;
+}
+ 
+
+.first-fac{
+     
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4.6rem;
+
+}
+ .Hosp{
+    margin-top: 40px;
+    color: rgb(17, 172, 255);
+    font-size: 1rem;
+ }
+ .Hosp:hover{
+    cursor: pointer;
+    color: blueviolet;
+ }
+ .fac-text h3{
+    padding-bottom: 0px;
+}
+
+.image{
+    display: flex;
+    height: 50%;
+   
+}
+.image img{
+    padding-top: 50px;
+    justify-content: space-between;
+    height: 100px;
+    
+   
+        
+}
+.image2{
+    display: grid;
+    z-index: -99;
+  
+}
+.image2 img{
+    padding-top: 50px;
+    height: 100px; 
+}
+.fac-text h3:hover{
+    cursor: pointer;
+    color: brown;
+}
+.second-fac h4:hover {
+    cursor: pointer;
+    color: brown;
+}
+.image img:hover{
+    cursor: pointer;
+    color:brown;
+    opacity: 50%;
+}
+.image2 img:hover{
+    cursor: pointer;
+    color:brown;
+    opacity: 50%;
+}
+.text{
+    font-size: 2rem;
+}
+.button{
+    display: block;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 2px; 
+    background: rgb(183, 219, 255);
+    width: 100%;
+    height: 50vh;
+}
+
+.serv{
+    background-color: aqua;
+    border-radius: .5rem;
+   padding:2rem 2rem;
+   border-style: none;
+   font-size: 1.5rem;
+   margin: 2rem; 
+
+   
+   
+}
+.All{
+     font-size: 1.7rem;
+     justify-content: right;
+     text-decoration: underline;
+     z-index: 1;
+     font-weight: bold;
+     color: rgb(76, 99, 252);
+}
+.All:hover{
+    cursor: pointer;
+    color: blueviolet ;
+
+}
+.serv:hover{
+    cursor:pointer;
+    background-color: lightblue;
+}
+@media screen and (max-width:850px){
+.facility{
+padding: 0px;
+height: 110vh;   
+}
+.listFacility a{
+    display: flex;
+}
+.fac-text{
+  width: 100%;
+  -webkit-box-flex: -1;
+}
+.first-fac{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.image img:hover{
+    cursor: pointer;
+    color:brown;
+    opacity: 50%;
+}
+.image2 img:hover{
+    cursor: pointer;
+    color:brown;
+    opacity: 90%;
+}
+
+}
