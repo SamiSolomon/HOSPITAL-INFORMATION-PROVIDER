@@ -1,8 +1,11 @@
 .footer{
     background: rgb(177, 223, 237);  
-    width: 100%;
+    width: 120%;
     justify-content: space-between;
-    left: 2px;
+    height: fit-content;
+    padding-top: 1rem;
+    
+     
     }
       
     .top{
@@ -47,7 +50,9 @@
     @media  screen and (max-width :850px){
         .footer{
             padding: 1rem .1rem;
-            width: 100%;
+            width: 150%;
+            font-size: .5rem;
+             
         }
          
         .bottom a{
@@ -55,11 +60,12 @@
     
         }
         .bottom div{
-            width: 15%;
-            display: flex;
+            width: 10%;
+             
             padding:4rem .01rem;
          }
          .bottom a:hover{
             color: brown;
         }
+         
     }

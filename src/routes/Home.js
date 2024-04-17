@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar.js';
 import Hero from "../Components/Hero.js"
 import Facility from '../Components/Facility.js';
 import Footer from '../Components/Footer.js';
-import SearchBar from '../Components/searchBar.js';
+// import SearchBar from '../Components/searchBar.js';
  
 function Home() {
   return (
@@ -20,7 +20,7 @@ function Home() {
    
         />
      
-    <SearchBar/>
+    {/* <SearchBar/> */}
     <Facility/> 
     <Footer/>
     </>

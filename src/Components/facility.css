@@ -1,10 +1,20 @@
+
+.listFacility{
+    height: 100%;
+    width: 130%;
+    background: linear-gradient(to bottom, rgb(165, 240, 250), #b7e7e8, #8fa3a6);
+
+}
+.listFacility h1{
+    padding-top: 2rem;
+    font-size: 2rem;
+}
 .facility{
-    background-color: rgb(183, 248, 248);
+    
     width: 100%;
     align-items: left;
-    height: 90vh;
-    padding-bottom: 100px;
-    display: grid;
+    padding-bottom: 50px;
+    display: flex;
   
 }
 .description{
@@ -16,7 +26,7 @@
     font-size: 2rem;
 
 }
-.facility h2{
+.facility h3{
     align-items: right;
 }
 .fac-text{
@@ -37,12 +47,15 @@
 }
  .Hosp{
     margin-top: 40px;
-    color: rgb(17, 172, 255);
-    font-size: 1rem;
+    color: rgb(1, 4, 6);
+    font-size: .1rem;
+      
+    margin-left: 50rem;
  }
  .Hosp:hover{
     cursor: pointer;
     color: blueviolet;
+    text-decoration: underline;
  }
  .fac-text h3{
     padding-bottom: 0px;
@@ -56,7 +69,9 @@
 .image img{
     padding-top: 50px;
     justify-content: space-between;
-    height: 100px;
+    height: 50vh;
+    right: 0;
+    
     
    
         
@@ -68,7 +83,7 @@
 }
 .image2 img{
     padding-top: 50px;
-    height: 100px; 
+    height: 50vh; 
 }
 .fac-text h3:hover{
     cursor: pointer;
@@ -97,46 +112,67 @@
     justify-items: center;
     justify-content: space-between;
     margin: 2px; 
-    background: rgb(183, 219, 255);
     width: 100%;
-    height: 50vh;
+    height: 100vh;
+ 
 }
-
 .serv{
-    background-color: aqua;
-    border-radius: .5rem;
-   padding:2rem 2rem;
-   border-style: none;
-   font-size: 1.5rem;
-   margin: 2rem; 
-
+ 
+border-radius: .5rem;
+padding:2rem 2rem;
+border-style: none;
+font-size: 1.5rem;
+margin: 2rem; 
+width: 30%;
    
    
 }
 .All{
      font-size: 1.7rem;
      justify-content: right;
-     text-decoration: underline;
+     text-decoration: none;
      z-index: 1;
      font-weight: bold;
      color: rgb(76, 99, 252);
+     margin-left:50rem ;
+     line-height: .5px;
 }
 .All:hover{
     cursor: pointer;
     color: blueviolet ;
-
+    text-decoration: underline;
+    
 }
 .serv:hover{
     cursor:pointer;
     background-color: lightblue;
+    
 }
 @media screen and (max-width:850px){
+.listFacility{
+  width: 100%;
+  height: 200vh;
+ 
+}
 .facility{
 padding: 0px;
-height: 110vh;   
+height: 110vh;  
+  
 }
 .listFacility a{
-    display: flex;
+    display: grid;
+    
+}
+.button{
+    width: 90%;   
+}
+.All{
+    margin-left: 25rem;
+    
+}
+.Hosp{
+    margin-left: 20rem;
+     
 }
 .fac-text{
   width: 100%;

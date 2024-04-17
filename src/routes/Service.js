@@ -1,34 +1,45 @@
+import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
-import Hero from "../Components/Hero.js"
-import SearchBar from '../Components/searchBar.js';
- 
+import SearchService from './SearchService';
+import "./serviceStyles.css";
+
+
+import React, { useState } from 'react';
+
 function Service(){
-    return(
-        <>
+   return( 
+  <>
+   <Navbar/>
+  
+     
+    <div className='Health'> 
+       
+      <h1>Health Services</h1>
+      <p>The healthcare services offered in Addis Ababa</p>
+      {/* <img src='https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' alt='stethoscope' className='service-image'/> */}
+      <SearchService/>
 
-        <Navbar/>
-        <Hero 
-        title = "Services"
-        text ="Enhancing the quality of health care in our country."
-        btnClass = "show"
-        buttonText="Hospitals"
-    />
-     <div className='cardDiv grid'>
-        <div className='searchInput'>
-            <label htmlFor='hospital'>Search Your Hospitals</label>
-            <div className='input flex'>
-                <input type='text' placeholder='Search by location,service or Hospital'/>
-                
-            </div>
-        </div>
-     </div>
-      <SearchBar/>
-      
-        </>
+   <div className="butn"> 
+     
+      <h5 className="top"> Our top Services</h5>
+       <button className='topService'>
+        <a href='#'>Dental</a>
+       </button>
+       <button className='topService'>
+        <a href='#'>Maternity</a>
+       </button>
+       <button className='topService'>
+        <a href='#'>Mental Health</a>
+       </button>
+       <button className='topService'>
+        <a href='#'>Emergency</a>
+      </button>
+        
+    </div>
+    </div>
+    <Footer/>
+ </>
 
-    );
- 
-
-
+)
 }
    export default Service;

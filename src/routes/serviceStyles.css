@@ -1,0 +1,69 @@
+/* Service.css */
+
+.Health {
+  
+  width: 120%;
+  background: linear-gradient(to bottom, rgb(164, 217, 241), #37b9f6, #88ecfe)
+  
+  }
+ 
+.service-image{
+  width: 20%;
+  height: 40vh;
+  margin-left: 40rem;
+}
+ 
+
+  
+  .Health h1 {
+    font-size: 32px;
+    color: #333;
+    padding-top: 10rem;
+  }
+  
+  .Health p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .butn {
+    margin-top: 20px;
+
+  }
+  
+  .top {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .topService {
+     
+    border-radius: .5rem;
+    padding:2rem 2rem;
+    border-style: none;
+    font-size: 1.5rem;
+    margin: 2rem; 
+    width: 30%;
+  }
+  .All {
+    font-size: 20px;
+    color: #333;
+    margin-top: 25px;
+  }
+  
+  .fa-arrow-alt-circle-right {
+    margin-left: 5px;
+  }
+  .topService:hover{
+  cursor:pointer;
+  background-color: lightblue;
+}
+@media screen and(max-width:850px) {
+  .Health{
+    font-size: 16px;
+    display: flex;
+  }
+  .topService{
+   padding:  8px;
+  }
+}

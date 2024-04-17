@@ -4,8 +4,9 @@ import yekatit  from "../Assets/yekatit.jpg";
 function Facility() {
   return (
     <div className="listFacility">
+      <h1>  Our Facilities</h1>
        <div className="facility">
-         <h1>  Our Facilities</h1>
+         
           <div className="fist-fac">
       
     
@@ -27,7 +28,7 @@ function Facility() {
         <h4>Yekatit 12 Referral Hospital</h4>
         <p> <span className="description">Address</span>: Tewodros Street, Addis Ababa.<br/> Location, Addis Ababa, Ethiopia. </p>
         
-        <h1 className="Hosp">All hospitals <i class='far fa-arrow-alt-circle-right'></i></h1>
+        
       </div>
      
      

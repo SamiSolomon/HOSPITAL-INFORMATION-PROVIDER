@@ -32,7 +32,7 @@ function Navbar() {
             </Link>
           </li>
         ))}
-      <button className='btn'>
+      <button className='btnn'>
         <a href='#'>BOOK</a>
       </button>
       </ul>
