@@ -2,11 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
 # Create your models here.
 # models.py
 
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
+    contact = models.CharField(max_length=20)
+    location = models.CharField(max_length=500)
+    information = models.TextField()
+    image = models.ImageField(null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     # Add other fields as needed
