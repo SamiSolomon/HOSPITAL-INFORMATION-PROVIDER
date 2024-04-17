@@ -43,7 +43,7 @@ class HospitalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Hospital
-        fields = ['id', 'name', 'services']
+        fields = ['id', 'name', 'services','location','information', 'image','contact']
 
     def create(self, validated_data):
         services_data = validated_data.pop('services')
