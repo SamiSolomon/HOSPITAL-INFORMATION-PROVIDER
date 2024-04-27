@@ -20,10 +20,10 @@ import "./footerStyles.css"
                  </div>
                  <div>
                 <h2>Useful Links</h2>
-                <a href='/'>About</a>
-                <a href='/'>Services</a>
-                <a href='/'>Hospitals</a>
-                <a href='/'>Contact</a>
+                <a href='http://localhost:3000/About'>About</a>
+                <a href='http://localhost:3000/service'>Services</a>
+                <a href='http://localhost:3000/Hospital'>Hospitals</a>
+                <a href='http://localhost:3000/Contact'>Contact</a>
              </div>
              <div>
               <h2>Follow us</h2>

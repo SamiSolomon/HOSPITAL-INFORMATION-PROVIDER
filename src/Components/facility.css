@@ -3,11 +3,11 @@
     height: 100%;
     width: 130%;
     background: linear-gradient(to bottom, rgb(165, 240, 250), #b7e7e8, #8fa3a6);
-
+    padding-left: 4rem;
 }
 .listFacility h1{
     padding-top: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .facility{
     
@@ -15,6 +15,7 @@
     align-items: left;
     padding-bottom: 50px;
     display: flex;
+    gap: 2rem;
   
 }
 .description{
@@ -39,24 +40,13 @@
  
 
 .first-fac{
-     
     align-items: center;
     justify-content: space-between;
     margin-top: 4.6rem;
 
 }
- .Hosp{
-    margin-top: 40px;
-    color: rgb(1, 4, 6);
-    font-size: .1rem;
-      
-    margin-left: 50rem;
- }
- .Hosp:hover{
-    cursor: pointer;
-    color: blueviolet;
-    text-decoration: underline;
- }
+ 
+ 
  .fac-text h3{
     padding-bottom: 0px;
 }
@@ -64,7 +54,7 @@
 .image{
     display: flex;
     height: 50%;
-   
+    
 }
 .image img{
     padding-top: 50px;
@@ -111,7 +101,6 @@
     align-items: center;
     justify-items: center;
     justify-content: space-between;
-    margin: 2px; 
     width: 100%;
     height: 100vh;
  
@@ -151,29 +140,32 @@ width: 30%;
 @media screen and (max-width:850px){
 .listFacility{
   width: 100%;
-  height: 200vh;
+  height: auto;
+
  
 }
 .facility{
+width: 100%;
 padding: 0px;
-height: 110vh;  
+height: auto;
+flex-direction: column;
+ align-items: left;
   
 }
 .listFacility a{
-    display: grid;
-    
-}
-.button{
-    width: 90%;   
-}
-.All{
-    margin-left: 25rem;
-    
-}
-.Hosp{
-    margin-left: 20rem;
+  
      
 }
+.button{
+    width: 100%;   
+}
+.All{
+    width: 100%;
+    margin-left: 20rem;
+    font-size: .75rem;
+    
+}
+ 
 .fac-text{
   width: 100%;
   -webkit-box-flex: -1;

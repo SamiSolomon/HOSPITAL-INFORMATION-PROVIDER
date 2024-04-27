@@ -1,24 +1,25 @@
 /* Service.css */
 
 .Health {
-  
-  width: 120%;
-  background: linear-gradient(to bottom, rgb(164, 217, 241), #37b9f6, #88ecfe)
-  
+padding-left: 3rem; 
+width: 120%;
+
+ background: linear-gradient(to bottom, rgb(164, 217, 241), #37b9f6, #88ecfe)
   }
  
-.service-image{
+/* .service-image{
   width: 20%;
   height: 40vh;
   margin-left: 40rem;
-}
+} */
  
 
   
   .Health h1 {
     font-size: 32px;
     color: #333;
-    padding-top: 10rem;
+    padding-top: 5rem;
+    margin-left: 3rem;
   }
   
   .Health p {
@@ -37,7 +38,6 @@
   }
   
   .topService {
-     
     border-radius: .5rem;
     padding:2rem 2rem;
     border-style: none;

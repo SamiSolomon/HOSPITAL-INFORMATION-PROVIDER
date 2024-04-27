@@ -10,15 +10,30 @@ function Home() {
     <>
      
       <Navbar/>
-      <Hero 
-      cName = "hero"
-      heroImg ="https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg"
-      title = "Hospitals and Their Services"
-      text ="Enhancing the quality of health care in our country."
-      btnClass = "show"
-      buttonText="Hospitals "
-   
-        />
+      <div className='welcome'>
+      <div className='Home' >
+      
+      <p>
+      <h1>Hospital Information: Medical Services  and Hospital Location</h1>
+        Welcome to our medical devices identifier and location provider!  
+        <button className='List'>
+      <a href='http://localhost:3000/Hospital'>List of Hospitals</a>
+      <i className="fas fa-chevron-right"></i>
+     </button>
+    <br/>
+    <button className=' List'>
+    <a href='http://localhost:3000/service'>Find Your nearest service</a>
+    <i className="fas fa-chevron-right"></i>
+     </button>
+      </p>
+      
+      <img className="home-image" src="https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg" alt= "" />
+    
+</div>
+ 
+      
+     
+</div>
      
     {/* <SearchBar/> */}
     <Facility/> 

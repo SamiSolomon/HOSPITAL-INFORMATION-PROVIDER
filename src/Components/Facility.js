@@ -17,7 +17,7 @@ function Facility() {
           <h3>Menelik II Referral Hospital</h3>
        <p><span className="description">Address</span>: Jan Meda, Russia Street, Addis Ababa.<br/> Location, Addis Ababa, Ethiopia.</p>
         </div>
-
+         
        </div>
      
       <div className="second-fac">
@@ -27,13 +27,11 @@ function Facility() {
         </div>
         <h4>Yekatit 12 Referral Hospital</h4>
         <p> <span className="description">Address</span>: Tewodros Street, Addis Ababa.<br/> Location, Addis Ababa, Ethiopia. </p>
+        </div>
         
-        
-      </div>
-     
      
        </div>
-      
+       <h1 className="All"><a href='http://localhost:3000/Hospital'>All Hospital</a> <i class='far fa-arrow-alt-circle-right'></i></h1>
       <div className="button">   
       <h5 className="text"> Our Services</h5>
        <button className='serv'>
@@ -48,7 +46,7 @@ function Facility() {
        <button className='serv'>
         <a href='#'>Emergency</a>
       </button>
-       <h1 className="All">All services <i class='far fa-arrow-alt-circle-right'></i></h1>
+       <h1 className="All"><a href='http://localhost:3000/service'>All services</a> <i class='far fa-arrow-alt-circle-right'></i></h1>
     </div>
    
     </div>

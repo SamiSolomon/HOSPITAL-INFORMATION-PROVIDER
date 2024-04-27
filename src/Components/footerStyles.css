@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: fit-content;
     padding-top: 1rem;
-    
+    padding-left: 3rem;
      
     }
       
@@ -49,10 +49,10 @@
     
     @media  screen and (max-width :850px){
         .footer{
-            padding: 1rem .1rem;
-            width: 150%;
+            padding: 1rem 2rem;
+            width: 120%;
             font-size: .5rem;
-             
+            z-index: 1;
         }
          
         .bottom a{
