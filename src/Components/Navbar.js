@@ -2,7 +2,8 @@ import './Navbar.css';
 import React, { useState } from 'react';
 import { MenuItems } from "./Menu.js";
 import { Link } from "react-router-dom";
-  
+import Language from '../routes/Language.js';
+ 
 
 const initialState = {
   clicked: false
@@ -32,9 +33,8 @@ function Navbar() {
             </Link>
           </li>
         ))}
-      <button className='btnn'>
-        <a href='#'>BOOK</a>
-      </button>
+        <Language/>
+       
       </ul>
      
     </nav>

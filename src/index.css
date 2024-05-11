@@ -1,6 +1,7 @@
 body {
+ 
   padding: 0;
-  
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -9,7 +10,17 @@ body {
 }
 
 code {
-  
+  display: block;
+  width: 100%;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 960px; /* or use max-width: 1200px; */
+  margin: 0 auto; /* center the container horizontally */
 }

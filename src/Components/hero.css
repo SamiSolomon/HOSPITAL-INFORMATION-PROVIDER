@@ -1,15 +1,15 @@
 .welcome {
     padding-top: 2.5rem;
     background-color: rgb(207, 233, 245);
-    width: 110%;
-    height: 50%;
+    
+    
   }
   
   .Home {
     text-align: left;
-    padding-top: 2rem;
+    padding-top: 3rem;
     display: flex;
-    
+    margin-left: 2rem;
   }
   
   .Home h1 {

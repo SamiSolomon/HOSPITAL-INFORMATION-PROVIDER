@@ -40,8 +40,10 @@ import "./footerStyles.css"
             <a href='/'>+251978796545</a>
             </div>
 
-            
-          
+            <hr></hr>
+          <div className='sb-foorer-below'>
+  
+          </div>
            
          </div>
         

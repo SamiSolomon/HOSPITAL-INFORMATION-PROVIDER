@@ -1,41 +1,45 @@
 /* AboutUs.css */
 
 .About {
-  margin-left: 0;
+ margin-left: 0;
   margin-top: 5rem;
   background-color: rgb(207, 233, 245);
+  display: block;
+  width: 90%;
 }
 
 .About h1 {
   font-size: 32px;
+  margin-left: 1rem;
 }
 
 .Healthcare {
   display: flex;
-  width: 84%;
+  
  
 }
  
   
 .Healthcare p {
-  font-size: 18px;
+  margin-left: 1rem;
+  margin-right: 3rem;
+  font-size: 16px;
    
 }
 
  .Healthcare .hospital-image {
   flex: 1;
   border-radius: 5px;
-  width: 1000px;
-  height: auto;
+  width: 60%;
+  height: 35vh;
   object-fit: cover;
-  position: relative;
+ position: relative;
 
   }
    
 
 .know {
- 
-  margin-top: 50px;
+ margin-top: 50px;
 }
 
 .know h2 {
@@ -114,8 +118,8 @@
   }
   
     .Healthcare p{
-      width: 100%;
-      font-size: 1.5rem;
+      width: 90%;
+      font-size: .75rem;
        
     }
     .Healthcare .hospital-image{
