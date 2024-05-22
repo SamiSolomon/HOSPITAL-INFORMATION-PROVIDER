@@ -1,36 +1,56 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
-
-# Create your models here.
-# models.py
-
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
-    contact = models.CharField(max_length=20)
-    location = models.CharField(max_length=500)
-    information = models.TextField()
-    image = models.ImageField(null=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    description = models.TextField()
+    image = models.ImageField(upload_to='hospital_images', null=True, blank=True)
+    location = models.ForeignKey('Location', on_delete=models.CASCADE, related_name='hospitals')
+    services = models.ManyToManyField('Service', related_name='hospitals')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
-    # Add other fields as needed
-
-    def __str__(self):
+    def __str__(self): 
         return self.name
 
-    def get_services(self):
-        return self.services.all()
-    # Other fields like address, contact info, etc.
 
-class Service(models.Model):
-    hospital = models.ForeignKey(Hospital, related_name='services', on_delete=models.CASCADE)
+
+class Location(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    address = models.CharField(max_length=200)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    zip_code = models.CharField(max_length=20)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
 
     def __str__(self):
-        return f"{self.hospital.name}"
-    # Other fields like price, availability, etc.
+        return f"{self.name}, {self.city}, {self.state}, {self.country}"
 
+class Appointment(models.Model):
+    patient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='appointments')
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, related_name='appointments')
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='appointments')
+    appointment_date = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    status = models.CharField(max_length=20, choices=[
+        ('pending', 'Pending'),
+        ('confirmed', 'Confirmed'),
+        ('cancelled', 'Cancelled')
+    ], default='pending')
 
+    def __str__(self):
+        return f"{self.patient.username} - {self.hospital.name} - {self.appointment_date}"       
+class HospitalServices(models.Model):
+    hospital = models.ForeignKey('Hospital', on_delete=models.CASCADE)
+    service = models.ForeignKey('Service', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        unique_together = ('hospital', 'service')
+
+    def __str__(self):
+        return f"{self.hospital.name} - {self.service.name}"
