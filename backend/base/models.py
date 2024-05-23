@@ -1,66 +1,36 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils import timezone
-import pytz
 
-ETHIOPIAN_TZ = pytz.timezone('Africa/Addis_Ababa')
 
-class Service(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.TextField()
 
-    def __str__(self):
-        return self.name
+# Create your models here.
+# models.py
 
 class Hospital(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField()
-    image = models.ImageField(upload_to='hospital_images', null=True, blank=True)
-    location = models.ForeignKey('Location', on_delete=models.CASCADE, related_name='hospitals')
-    services = models.ManyToManyField(Service, related_name='hospitals')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    contact = models.CharField(max_length=20)
+    location = models.CharField(max_length=500)
+    information = models.TextField()
+    image = models.ImageField(null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
-    def __str__(self): 
+    # Add other fields as needed
+
+    def __str__(self):
         return self.name
 
-class Location(models.Model):
+    def get_services(self):
+        return self.services.all()
+    # Other fields like address, contact info, etc.
+
+class Service(models.Model):
+    hospital = models.ForeignKey(Hospital, related_name='services', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=100)
-    state = models.CharField(max_length=100)
-    country = models.CharField(max_length=100)
-    zip_code = models.CharField(max_length=20)
-    latitude = models.FloatField()
-    longitude = models.FloatField()
+    description = models.TextField()
 
     def __str__(self):
-        return f"{self.name}, {self.city}, {self.state}, {self.country}"
+        return f"{self.hospital.name}"
+    # Other fields like price, availability, etc.
 
-class HospitalServices(models.Model):
-    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE)
-    service = models.ForeignKey(Service, on_delete=models.CASCADE)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        unique_together = ('hospital', 'service')
 
-    def __str__(self):
-        return f"{self.hospital.name} - {self.service.name}"
-
-class Appointment(models.Model):
-    patient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='appointments')
-    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, related_name='appointments')
-    service = models.ForeignKey(HospitalServices, on_delete=models.CASCADE, related_name='appointments')
-    appointment_date = models.DateTimeField(default=timezone.now)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.CharField(max_length=20, choices=[
-        ('pending', 'Pending'),
-        ('confirmed', 'Confirmed'),
-        ('cancelled', 'Cancelled')
-    ], default='pending')
-
-    def __str__(self):
-        return f"{self.patient.username} - {self.hospital.name} - {self.appointment_date}"
