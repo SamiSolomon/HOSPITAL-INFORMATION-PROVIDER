@@ -2,7 +2,7 @@
 
 .listHospital {
   width: 120%;
-  margin-left: 0;
+  align-items: left;
   margin-top: 5rem;
   height: 80vh;
   background-color: rgb(207, 233, 245);
@@ -29,19 +29,18 @@
 .Hospitals p {
   font-size: 18px;
 }
-
 .Hospitals h1 {
-  font-size: 32px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .Hospital-image {
-flex: 1;
-display: block;
-border-radius: 5px;
-width: 80%;
-height: 75vh;
-object-fit: cover;
-position: relative;
+  max-width: 150%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .hospital-list {
@@ -114,16 +113,21 @@ position: relative;
   text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .Hospitals {
     flex-direction: column;
-    align-items: center;
     height: 100vh;
     
   }
-  .Hospital-image {
-    height: 10vh;
+  .listHospital {
+    padding: 1.5rem;
   }
+
+  .Hospital-image {
+    max-width: 70%;
+    border-radius: 6px;
+  }
+  
 
   .hospital-card {
     width: 90%;

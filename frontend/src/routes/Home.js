@@ -3,7 +3,8 @@ import Navbar from '../Components/Navbar.js';
 import Hero from "../Components/Hero.js"
 import Facility from '../Components/Facility.js';
 import Language from './Language.js';
- 
+import { Link } from 'react-router-dom';
+import photo3 from "../Assets/photo3.jpg"
  
 // import SearchBar from '../Components/searchBar.js';
  
@@ -18,19 +19,20 @@ function Home() {
       
       <p>
       <h1>Hospital Information: Medical Services  and Hospital Location</h1>
-        Welcome to our medical devices identifier and location provider!  
+        Welcome to our medical devices identifier and location provider! 
+       
         <button className='List'>
-      <a href='http://localhost:3000/Hospital'>List of Hospitals</a>
+        <Link to="/Hospital">  List of Hospitals </Link> 
       <i className="fas fa-chevron-right"></i>
      </button>
     <br/>
     <button className=' List'>
-    <a href='http://localhost:3000/service'>Find Your nearest service</a>
+    <Link to="/Service"> Your nearest service </Link> 
     <i className="fas fa-chevron-right"></i>
      </button>
       </p>
       
-      <img className="home-image" src="https://www.shutterstock.com/image-photo/medicine-healthcare-people-concept-female-600nw-2188588635.jpg" alt= "" />
+      <img className="home-image" src={ photo3} alt= "" />
     
 </div>
 <Facility/> 
