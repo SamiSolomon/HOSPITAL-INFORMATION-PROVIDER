@@ -1,50 +1,21 @@
-
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component from react-router-dom
 import Navbar from '../Components/Navbar';
-import "./AboutUs.css";
-import Footer from '../Components/Footer';
-import { Link } from 'react-router-dom';
-function About()
-{
-    return(
-        <>
-         <Navbar/>
-        
-     <div className='About'>
-     
-      <div className='Healthcare' >
-      
+import "./Vision.css"
+function Vision() {
+  return (
+    <div>
+        <Navbar/>
+      <div className='purpose'>
+      <h1>Our Vision, Values, and Purpose</h1>
       <p>
-      <h1>About Us</h1>
-        Welcome to our medical devices identifier and location provider! We are a team of dedicated professionals
-        committed to improving the healthcare industry through innovative technology.
+        Our vision, values, and purpose guide our work in the healthcare industry.
+        We are committed to improving the lives of patients through innovative
+        technology.
       </p>
-      
+      <Link to="/about">Back to About Page</Link>
       </div>
-     
-      <div>
-        <div className='know'>
-          <h2>Get to know Us</h2>
-        <div className='ourWork'>
-            <div className="vision">
-            <i className="fa fa-medkit"></i>    
-      <Link to="/vision">Our Vision, Values and purpose</Link>
-      <div id="vision"> 
-      </div>
-          </div>
-          <div className='vision'>
-          <i class='fas fa-users'></i>
-          <Link to="/team">Who we are</Link>
-      <div id="who-we-areision">
-      <p>
-         Learn about team. 
-        </p>
-      </div>
-      </div>
-     
-      
-      </div> 
-    </div>
-    <div className='footer'>
+      <div className='footer'>
         <div className='top'>
            <div>
             <h1>Hospital Information</h1>
@@ -88,13 +59,9 @@ function About()
          </div>
         
      </div>
-     
-   </div>
-   </div>
-   
-        </>
-           
-        );
+    </div>
 
+  );
 }
-export default About;
+
+export default Vision;

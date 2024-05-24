@@ -2,7 +2,7 @@
 import Navbar from '../Components/Navbar';
 import SearchService from './SearchService';
 import "./serviceStyles.css";
-
+import photo22 from "../Assets/photo22.jpg"
 
 import React, { useState } from 'react';
 
@@ -17,7 +17,7 @@ function Service(){
         Welcome to our medical devices identifier and location provider! We are a team of dedicated professionals
         committed to improving the healthcare industry through innovative technology.
       </p>
-      <img className="hospitalImage" src="https://i0.wp.com/www.ethiopiaobserver.com/wp-content/uploads/2019/04/Doctor_Patient1.jpg?resize=937%2C450&ssl=1" alt= "" />
+      <img className="hospitalImage" src= {photo22} alt= "" />
       </div>
       </div>
       <p>The healthcare services offered in Addis Ababa</p>

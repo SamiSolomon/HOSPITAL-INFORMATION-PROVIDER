@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import './HospitalList.css'; // CSS file for styling
 import Hero from "../Components/Hero.js"
+import photo11 from "../Assets/photo11.jpg"
 
 const hospitals = [
   {
@@ -41,7 +42,7 @@ function Hospital() {
       <h1>List of Hospitals</h1>
         These are the some hospitals in Addis Ababa
       </p>
-      <img className="Hospital-image" src="https://www.centralwest.health.qld.gov.au/__data/assets/image/0019/120565/Banner-6.png" alt= "" />
+      <img className="Hospital-image" src= {photo11} alt= "" />
       </div>
       </div>
       <div className='Hospit' >

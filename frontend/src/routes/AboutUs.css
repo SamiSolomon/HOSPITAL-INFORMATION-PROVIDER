@@ -2,10 +2,10 @@
 
 .About {
  margin-left: 0;
-  margin-top: 5rem;
-  background-color: rgb(207, 233, 245);
+margin-top: 5rem;
+background-color: rgb(207, 233, 245);
   display: block;
-  width: 90%;
+  width:95%;
 }
 
 .About h1 {
@@ -27,15 +27,7 @@
    
 }
 
- .Healthcare .hospital-image {
-  flex: 1;
-  border-radius: 5px;
-  width: 60%;
-  height: 35vh;
-  object-fit: cover;
- position: relative;
-
-  }
+ 
    
 
 .know {
@@ -45,8 +37,9 @@
 }
 
 .know h2 {
-  font-size: 32px;
+ font-size: 32px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .ourWork {
@@ -120,13 +113,12 @@
   }
   
     .Healthcare p{
-      width: 90%;
-      font-size: .75rem;
+      width: 100%;
+      font-size: 1rem;
        
     }
-    .Healthcare .hospital-image{
-      width: 100%;
-
+    .know{
+      height: 110vh;
     }
     .vision,
     .links{
