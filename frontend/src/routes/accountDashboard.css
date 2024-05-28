@@ -1,0 +1,45 @@
+.account-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .account-dashboard h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .account-dashboard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .account-dashboard p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .account-dashboard button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .account-dashboard button:hover {
+    background-color: #0056b3;
+  }
+  
+  .account-dashboard ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .account-dashboard li {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }

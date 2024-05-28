@@ -1,14 +1,30 @@
  
 import Navbar from '../Components/Navbar';
 import "./Contactstyles.css";
- 
+import React, { useState } from 'react';
+
 function Contact()
 
 {
+  const [showAlert, setShowAlert] = useState(false);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  // Handle form submission logic here
+  setShowAlert(true);
+};
+
+const closeAlert = () => {
+  setShowAlert(false);
+};
+
+const closeSuccessMessage = () => {
+  document.getElementById('success-message').style.display = 'none';
+};
     return(
     <>
     <Navbar/>
- <div className='contact'>
+    <div className='contact'>
   <div className='healthcontact'>
     <p>
       <h1>Contact Us</h1>
@@ -16,7 +32,7 @@ function Contact()
     </p>
   </div>
 
-  <form>
+  <form id="contact-form">
     <div>
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" required pattern="[a-zA-Z\s]+" title="Name should only contain letters" />
@@ -50,7 +66,24 @@ function Contact()
       <button type="submit">Submit</button>
     </div>
   </form>
- </div>
+
+  <div id="success-message" style={{ display: 'none' }}>
+    <p>Thank you for your submission! We will review your feedback and get back to you soon.</p>
+    <button onClick={closeSuccessMessage}>Close</button>
+  </div>
+
+  {showAlert && (
+    <div className="alert">
+      <p>Thank you for your submission! We will review your feedback and get back to you soon.</p>
+      <button onClick={closeAlert}>Close</button>
+    </div>
+  )}
+</div>
+
+                {/* //In your component's JavaScript code: */}
+
+
+ 
       <div className='footer'>
         <div className='top'>
            <div>

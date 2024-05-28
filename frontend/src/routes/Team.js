@@ -8,6 +8,7 @@ const Team = () => {
     <Navbar/>
     <div className='team'>
       <div className='our'>
+      <Link to="/about">  About </Link>
         <h1>Who we are</h1>
       <p>
       Our team is made up of passionate healthcare professionals and
@@ -44,7 +45,7 @@ const Team = () => {
           working closely with our clients to understand their needs
           and deliver tailored solutions.
         </p>
-        <Link to="/about">  About </Link>
+       
       </div>
      
     </div>

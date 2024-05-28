@@ -2,17 +2,18 @@ import React from 'react';
 import Navbar from '../Components/Navbar.js';
 import Hero from "../Components/Hero.js"
 import Facility from '../Components/Facility.js';
-import Language from './Language.js';
+ 
 import { Link } from 'react-router-dom';
 import photo3 from "../Assets/photo3.jpg"
+import Language from './Language.js';
  
 // import SearchBar from '../Components/searchBar.js';
  
 function Home() {
   return (
     <>
-     <Language/>
-      <Navbar/>
+
+    {/* <Navbar/> */}
        
       <div className='welcome'>
       <div className='Home' >

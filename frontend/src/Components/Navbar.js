@@ -2,7 +2,7 @@ import './Navbar.css';
 import React, { useState } from 'react';
 import { MenuItems } from "./Menu.js";
 import { Link } from "react-router-dom";
-import Language from '../routes/Language.js';
+ 
  
 
 const initialState = {
@@ -15,7 +15,7 @@ function Navbar() {
   const handleClick = () => {
     setState({ ...state, clicked: !state.clicked });
   };
-
+  
   return (
     <header>
     <nav className="NavbarItems">
@@ -33,8 +33,9 @@ function Navbar() {
             </Link>
           </li>
         ))}
-        <Language/>
+        
        
+         
       </ul>
      
     </nav>

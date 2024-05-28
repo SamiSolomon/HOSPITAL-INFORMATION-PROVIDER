@@ -1,16 +1,16 @@
 /* HospitalList.css */
 
 .listHospital {
-  width: 120%;
+  width: 128%;
   align-items: left;
-  margin-top: 5rem;
-  height: 80vh;
+  margin-top: 1rem;
+  height: 60vh;
   background-color: rgb(207, 233, 245);
 }
 
 .Hospit {
   background-color: rgb(207, 233, 245);
-  width: 120%;
+  width: 130%;
 }
 
 .Hospitals {
@@ -22,6 +22,7 @@
   justify-content: center;
   align-items: center;
   width: 120%;
+  height: 30vh;
   overflow-x: none;
   padding: 0 1rem;
 }
@@ -36,33 +37,29 @@
 }
 
 .Hospital-image {
-  max-width: 150%;
+  max-width: 120%;
   height: auto;
+  width: 38%;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
   transition: transform 0.3s ease;
 }
 
 .hospital-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0;
-  width: 100%;
-  padding-top: 4rem;
-  padding-left: 0;
-  background: linear-gradient(to bottom, rgb(218, 232, 239), #c2e5f5, #e3f7fa);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, .1fr));
+  grid-gap: 2rem;
+  padding-top: 3rem;
+  
 }
 
 .hospital-card {
-  width: 300px;
-  margin-left: 0;
-  margin: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   overflow: hidden;
-  background-color: #f2f2f2;
+  transition: transform 0.3s ease;
 }
 
 .hospital-card:hover {
@@ -78,7 +75,7 @@
 
 .hospital-image {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -97,13 +94,19 @@
   vertical-align: middle;
   width: 24px;
   display: flex;
+  align-items: center;
 }
+.hospital-details i.fas.fa-map-marker-alt {
+  margin-right: 5px;
+  }
 
 .hospital-details p {
   margin-top: 5px;
   font-size: 14px;
 }
-
+.hospital-details p a {
+  margin-left: 5px;
+  }
 .hospital-details a {
   text-decoration: none;
   color: #007bff;

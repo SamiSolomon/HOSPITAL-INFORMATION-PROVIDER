@@ -1,0 +1,55 @@
+/* MaternityServices.css */
+.maternity-services {
+    margin-top: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .maternity{
+    margin-top: 5rem;
+  }
+  .maternity-services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .maternity-services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .maternity-services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .maternity-services h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .maternity-services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .maternity-services li {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .maternity-services li p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .maternity-services .service-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .maternity-services .service-details p {
+    margin-bottom: 0.25rem;
+  }

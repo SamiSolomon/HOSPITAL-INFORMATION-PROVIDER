@@ -6,9 +6,12 @@ function Vision() {
   return (
     <div>
         <Navbar/>
-       
+        
       <div className='purpose'>
         <div className='value'>
+         
+        <Link to="/about">  About </Link>
+      
       <h1>Our Vision, Values, and Purpose</h1>
       <p>
         Our vision, values, and purpose guide our work in the healthcare industry.
@@ -29,7 +32,7 @@ People-Centered Care: We support people through their care journey, involve them
 Quality and Safety: We put safety first and build quality into everything we do.
 
 Integrity and Accountability: We have a culture of mutual respect, fair dealing, ethical behavior, and transparency. We are accountable for our performance.</p>
-      <Link to="/about">  About </Link>
+      
       </div>
       <div className='footer'>
         <div className='top'>

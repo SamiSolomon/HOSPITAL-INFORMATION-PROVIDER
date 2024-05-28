@@ -3,8 +3,9 @@ import Navbar from '../Components/Navbar';
 import SearchService from './SearchService';
 import "./serviceStyles.css";
 import photo22 from "../Assets/photo22.jpg"
-
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+ 
 
 function Service(){
    return( 
@@ -28,16 +29,16 @@ function Service(){
      
       <h5 className="top"> Our top Services</h5>
        <button className='topService'>
-        <a href='#'>Dental</a>
+       <Link to="/dental">Dental</Link>
        </button>
        <button className='topService'>
-        <a href='#'>Maternity</a>
+       <Link to="/maternity">Marernity</Link>
        </button>
        <button className='topService'>
-        <a href='#'>Mental Health</a>
+       <Link to="/mentalhealth">Mental Health</Link>
        </button>
        <button className='topService'>
-        <a href='#'>Emergency</a>
+       <Link to="/emergency">Emergency</Link>
       </button>
         
     </div>
@@ -59,10 +60,10 @@ function Service(){
                  </div>
                  <div>
                 <h2>Useful Links</h2>
-                <a href='http://localhost:3000/About'>About</a>
-                <a href='http://localhost:3000/service'>Services</a>
-                <a href='http://localhost:3000/Hospital'>Hospitals</a>
-                <a href='http://localhost:3000/Contact'>Contact</a>
+                <Link to="/About">About</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/Hospital">Hospitals</Link>
+                <Link to="/Contact"></Link>Contact
              </div>
              <div>
               <h2>Follow us</h2>

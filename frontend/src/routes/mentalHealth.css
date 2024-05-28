@@ -1,0 +1,54 @@
+/* MentalHealthServices.css */
+.mental-health-services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .mentalHealth{
+    margin-top: 5rem;
+  }
+  .mental-health-services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mental-health-services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mental-health-services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mental-health-services h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mental-health-services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .mental-health-services li {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mental-health-services li p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mental-health-services .service-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .mental-health-services .service-details p {
+    margin-bottom: 0.25rem;
+  }

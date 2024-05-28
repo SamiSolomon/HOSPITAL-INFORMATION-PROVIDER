@@ -12,6 +12,20 @@
   .our h1{ 
     text-align: center;
   }
+  .our a {
+    margin-top: 5rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+  }
+  .our a:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
   .team p {
     font-size: 1.1rem;
     line-height: 1.6;
