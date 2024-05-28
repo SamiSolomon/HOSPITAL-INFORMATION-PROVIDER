@@ -1,0 +1,60 @@
+.purpose{
+    margin-top: 4rem;
+    width: 90%;
+    height: 150vh;
+}
+ .value{
+  background-color: rgb(207, 233, 245);
+  padding-top: 1rem;
+ }
+
+.purpose h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.purpose h2 {
+  font-size: 1.5rem;
+  
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.purpose p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+.vision-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .vision-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .vision-description {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .back-link {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .back-link:hover {
+    color: #0056b3;
+  }

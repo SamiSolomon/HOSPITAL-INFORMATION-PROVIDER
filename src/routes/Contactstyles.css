@@ -1,0 +1,133 @@
+/* Contactstyles.css */
+
+.contact {
+  padding: 2rem;
+  margin-top: 5rem;
+  background-color: rgb(188, 225, 236);
+  width: 110%;
+}
+
+.healthcontact {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.healthcontact h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+
+#contact-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.submit-container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.alert button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#success-message button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+
+  .healthcontact h1 {
+    font-size: 1.5rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea,
+  #contact-form select {
+    font-size: 0.9rem;
+  }
+
+  .submit-container button {
+    font-size: 0.9rem;
+  }
+
+  .alert,
+  #success-message {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .alert button,
+  #success-message button {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,66 @@
+.team {
+    margin-top: 5.5rem;
+    
+    width: 90%;
+    background-color: #f4f4f4;
+  }
+  .our{
+    padding-top: 1rem;
+    
+    background-color: rgb(207, 233, 245);
+  }
+  .our h1{ 
+    text-align: center;
+  }
+  .team p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+ 
+  }
+  
+  .team-highlights {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .highlight {
+    flex-basis: 30%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .highlight i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .highlight p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .team-highlights {
+      justify-content: center;
+    }
+  
+    .highlight {
+      flex-basis: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .highlight {
+      flex-basis: 100%;
+    }
+  }
