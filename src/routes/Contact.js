@@ -1,56 +1,89 @@
  
 import Navbar from '../Components/Navbar';
 import "./Contactstyles.css";
- 
+import React, { useState } from 'react';
+
 function Contact()
 
 {
+  const [showAlert, setShowAlert] = useState(false);
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  // Handle form submission logic here
+  setShowAlert(true);
+};
+
+const closeAlert = () => {
+  setShowAlert(false);
+};
+
+const closeSuccessMessage = () => {
+  document.getElementById('success-message').style.display = 'none';
+};
     return(
     <>
     <Navbar/>
     <div className='contact'>
-    <div className='healthcontact' >
-      
-      <p>
+  <div className='healthcontact'>
+    <p>
       <h1>Contact Us</h1>
-        Welcome to our medical devices identifier and location provider! Ask a question, get health advice, give a compliment or make a complaint
-      </p>
+      Welcome to our medical devices identifier and location provider! Ask a question, get health advice, give a compliment or make a complaint
+    </p>
+  </div>
+
+  <form id="contact-form">
+    <div>
+      <label htmlFor="name">Name:</label>
+      <input type="text" id="name" name="name" required pattern="[a-zA-Z\s]+" title="Name should only contain letters" />
     </div>
-      
-      <form>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div>
-            <label htmlFor="name">Family Name:</label>
-            <input type="text" id="familyname" name="familyname" required />
-          </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div>
-            <label htmlFor="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-        <div>
-            <label htmlFor="hospital">Which hospital or service is your feedback about?</label>
-            <select id="hospital" name="hospital" required>
-            <option value="">Select a hospital</option>
-            <option value="hospital1">Menelik Hospital </option>
-            <option value="hospital2">Yekatit Hospital </option>
-            <option value="hospital3">St.Paul's Hospital </option>
-    </select>
-          </div>
-        <div>
-          <label htmlFor="message">Provide detailed feedback for us</label>
-          <textarea id="message" name="message" rows="5" />
-        </div>
-        <div className='submit-container'> 
-        <button type="submit">Submit</button>
-        </div>
-      </form>
+    <div>
+      <label htmlFor="name">Family Name:</label>
+      <input type="text" id="familyname" name="familyname" required pattern="[a-zA-Z\s]+" title="Family name should only contain letters" />
+    </div>
+    <div>
+      <label htmlFor="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label htmlFor="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="\+?\d{10,}$" title="Phone number should be at least 10 digits and contain only numbers" />
+    </div>
+    <div>
+      <label htmlFor="hospital">Which hospital or service is your feedback about?</label>
+      <select id="hospital" name="hospital" required>
+        <option value="">Select a hospital</option>
+        <option value="hospital1">Menelik Hospital</option>
+        <option value="hospital2">Yekatit Hospital</option>
+        <option value="hospital3">St.Paul's Hospital</option>
+      </select>
+    </div>
+    <div>
+      <label htmlFor="message">Provide detailed feedback for us</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div className='submit-container'>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+  <div id="success-message" style={{ display: 'none' }}>
+    <p>Thank you for your submission! We will review your feedback and get back to you soon.</p>
+    <button onClick={closeSuccessMessage}>Close</button>
+  </div>
+
+  {showAlert && (
+    <div className="alert">
+      <p>Thank you for your submission! We will review your feedback and get back to you soon.</p>
+      <button onClick={closeAlert}>Close</button>
+    </div>
+  )}
+</div>
+
+                {/* //In your component's JavaScript code: */}
+
+
+ 
       <div className='footer'>
         <div className='top'>
            <div>
@@ -95,7 +128,6 @@ function Contact()
         
      </div>
      
-    </div>
      
     
  

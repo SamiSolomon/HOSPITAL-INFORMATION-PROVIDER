@@ -4,106 +4,129 @@ import Navbar from '../Components/Navbar';
  
 function Book() {
   const [selectedHospital, setSelectedHospital] = useState('');
+  const [selectedService, setSelectedService] = useState('');
   const [name, setName] = useState('');
   const [lastname, setLastname] = useState('');
   const [appointmentDate, setAppointmentDate] = useState('');
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission, such as sending data to an API
-    console.log('Form submitted:', { selectedHospital, name,lastname, appointmentDate });
+    console.log('Form submitted:', { selectedHospital, selectedService, name, lastname, appointmentDate });
     // Reset form fields
     setSelectedHospital('');
+    setSelectedService('');
     setName('');
     setLastname('');
     setAppointmentDate('');
+    alert('Appointment booked successfully!');
   };
-
+  
   const handleHospitalChange = (e) => {
     setSelectedHospital(e.target.value);
   };
-
+  
+  const handleServiceChange = (e) => {
+    setSelectedService(e.target.value);
+  };
+  const handleAppointmentDateChange = (e) => {
+    const selectedDate = new Date(e.target.value);
+    const today = new Date();
+    if (selectedDate >= today) {
+      setAppointmentDate(e.target.value);
+    } else {
+      alert('Please select a date that is not before today.');
+    }
+  };
   return (
     <>
-    <Navbar/>
-    <div class="information">
-  <h3>Important Information:</h3>
-  <p>Please read the following information before scheduling your appointment:</p>
-  <ul>
-    <li>Make sure to arrive at least 15 minutes before your scheduled appointment time.</li>
-    <li>Bring your identification card and any relevant medical documents with you.</li>
-    <li>Payment is required at the time of the appointment. We accept cash and major credit cards.</li>
-    <li>Please note that appointment cancellation should be done at least 24 hours in advance.</li>
-  </ul>
-</div>
-    <div className='Book'> 
-    
-    <div className="booking-form">
-      <h1>Booking Appointment</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="hospital">Hospital:</label>
-          <select
-            id="hospital"
-            value={selectedHospital}
-            onChange={handleHospitalChange}
-            required
-          >
-            <option value="">Select a hospital</option>
-            <option value="hospital1">Menelik Hospital </option>
-            <option value="hospital2">Yekatit Hospital </option>
-            <option value="hospital3">St.Paul's Hospital </option>
-            {/* Add more options for other hospitals */}
-          </select>
+      <Navbar />
+      <div className="information">
+        <h3>Important Information:</h3>
+        <p>Please read the following information before scheduling your appointment:</p>
+        <ul>
+          <li>Make sure to arrive at least 15 minutes before your scheduled appointment time.</li>
+          <li>Bring your identification card and any relevant medical documents with you.</li>
+          <li>Payment is required at the time of the appointment. We accept cash and major credit cards.</li>
+          <li>Please note that appointment cancellation should be done at least 24 hours in advance.</li>
+        </ul>
+      </div>
+      <div className="Book">
+        <div className="booking-form">
+          <h1>Booking Appointment</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="hospital">Hospital:</label>
+              <select
+                id="hospital"
+                value={selectedHospital}
+                onChange={handleHospitalChange}
+                required
+              >
+                <option value="">Select a hospital</option>
+                <option value="hospital1">Menelik Hospital</option>
+                <option value="hospital2">Yekatit Hospital</option>
+                <option value="hospital3">St.Paul's Hospital</option>
+                {/* Add more options for other hospitals */}
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="service">Service:</label>
+              <select
+                id="service"
+                value={selectedService}
+                onChange={handleServiceChange}
+                required
+              >
+                <option value="">Select a Service</option>
+                <option value="service1">Dental</option>
+                <option value="service2">Maternity</option>
+                <option value="service3">Gynecology</option>
+                <option value="service4">others</option>
+                {/* Add more options for other services */}
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="name">First Name:</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                pattern="[a-zA-Z\s]+"
+                title="Name should only contain letters"
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                value={lastname}
+                onChange={(e) => setLastname(e.target.value)}
+                required
+                pattern="[a-zA-Z\s]+"
+                title="Last name should only contain letters"
+              />
+            </div>
+            <div className="form-group">
+            <label htmlFor="appointment-date">Appointment Date:</label>
+            <input
+              type="date"
+              id="appointment-date"
+              value={appointmentDate}
+              onChange={handleAppointmentDateChange}
+              required
+              min={new Date().toISOString().split('T')[0]}
+            />
+          </div>
+            <button type="submit">Book Appointment</button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="service">services:</label>
-          <select
-            id="service"
-            value={selectedHospital}
-            onChange={handleHospitalChange}
-            required
-          >
-            <option value="">Select a Service</option>
-            <option value="Service1">Dental </option>
-            <option value="Service2">maternity </option>
-            <option value="Service3">gynecology</option>
-            {/* Add more options for other hospitals */}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">First Name:</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="lastname">Last Name:</label>
-          <input
-            type="text"
-            id="lastname"
-            value={lastname}
-            onChange={(e) => setLastname(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="appointment-date">Appointment Date:</label>
-          <input
-            type="date"
-            id="appointment-date"
-            value={appointmentDate}
-            onChange={(e) => setAppointmentDate(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Book Appointment</button>
-      </form>
-    </div>
+      </div>
+   
+   
     <div className='footer'>
         <div className='top'>
            <div>
@@ -148,7 +171,7 @@ function Book() {
         
      </div>
      
-    </div>
+    
  
     </>
   );

@@ -1,0 +1,42 @@
+.dental-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .hospitalist,
+  .dental-services {
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+  } 
+  .hospitalist a {
+    margin-top: 5rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+  } 
+  .hospitalist a:hover{
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+  .hospital-card,
+  .service-card {
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hospital-card h3,
+  .service-card h3 {
+    margin-top: 0;
+  }
+  
+  .hospital-card p,
+  .service-card p {
+    margin-bottom: 0.5rem;
+  }

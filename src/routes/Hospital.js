@@ -8,11 +8,11 @@ import photo11 from "../Assets/photo11.jpg"
 const hospitals = [
   {
     name: "Menelik Hospital",
-    image: "https://lh5.googleusercontent.com/p/AF1QipNVTepeA4VcoFzkBa9hazYKiENwWezDEJGsOTSM=w500-h500-k-no ",
+    image: "https://lh5.googleusercontent.com/p/AF1QipNVTepeA4VcoFzkBa9hazYKiENwWezDEJGsOTSM=w500-h500-k-no",
     address: "Jan Meda, Russia Street, Addis Ababa.",
     location: "https://www.google.com/maps?q=Menelik+Hospital",
     services: "https://www.menelikhospital.com/services",
-    Book:"http://localhost:3000/Book",
+    Book: "http://localhost:3000/Book",
   },
   {
     name: "Yekatit 12 Hospital",
@@ -27,8 +27,23 @@ const hospitals = [
     address: "Medical school in Addis Ababa, Ethiopia",
     location: "https://www.google.com/maps?q=St.Paul%27s+Hospital",
     services: "http://localhost:3000/service",
+  },
+  {
+    name: "Amen General Hospital",
+    image: "https://th.bing.com/th/id/OIP.bx7xMxSUgfeqALk--mE_hQHaEO?rs=1&pid=ImgDetMain",
+    address: "Bole Road, Addis Ababa",
+    location: "https://www.google.com/maps?q=Amen+General+Hospital",
+    services: "https://www.amengeneral.com/services",
+    Book: "http://localhost:3000/Book"
+  },
+  {
+    name: "Bethel Teaching General Hospital",
+    image: "https://th.bing.com/th/id/OIP.HUtYkN1MnGNntNf7jIRD_AAAAA?rs=1&pid=ImgDetMain",
+    address: "Ethio-China Friendship Avenue, Addis Ababa",
+    location: "https://www.google.com/maps?q=Bethel+Teaching+General+Hospital",
+    services: "https://www.bethelteachinggeneral.com/services",
+    Book: "http://localhost:3000/Book"
   }
-  // Add more hospitals as needed
 ];
 
 function Hospital() {
@@ -55,13 +70,13 @@ function Hospital() {
                 <div className="hospital-details">
                   <h2>{hospital.name}</h2>
                   <p>Address: {hospital.address}</p>
-                  <i class='fas fa-map-marker-alt'></i>
+                  <i className='fas fa-map-marker-alt'></i>
                   <p><a href={hospital.location}  >Location</a></p>
 
                   <i className='fas fa-stethoscope'></i>
                   <p><a href={hospital.services}  
                   >Services</a></p>
-                  <i class="fa fa-calendar"></i>
+                  <i className="fa fa-calendar"></i>
                   <p><a href={hospital.Book}   >Book</a></p>
                 </div>
               </a>
